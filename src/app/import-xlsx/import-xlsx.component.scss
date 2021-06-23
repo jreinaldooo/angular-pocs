@@ -1,0 +1,8 @@
+.content {
+  padding: 10px 0;
+}
+
+:host ::ng-deep ugl-simple-table table.base-table.central {
+    width: 100% !important;
+}
+

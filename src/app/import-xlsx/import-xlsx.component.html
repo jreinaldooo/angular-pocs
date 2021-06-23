@@ -1,0 +1,6 @@
+<input type="file" (change)="onFileChange($event)" multiple="false" />
+
+<div *ngIf="data" class="content">
+
+  <ugl-simple-table [style]="'central'" [noDataMessage]="" [table]="table"> </ugl-simple-table>
+</div>

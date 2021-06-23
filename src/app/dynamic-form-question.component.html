@@ -1,0 +1,30 @@
+
+
+<div [formGroup]="form">
+
+  <div [ngSwitch]="question.controlType">
+
+    <ugl-field [label]="question.label" *ngSwitchCase="'text'"
+      [name]="question.label"
+      [required]="question.required"
+      [value]="question.value"
+      [type]="question.controlType"
+      [message]="'Type an ' + question.label"
+      [messageRequired]="'Required'">
+    </ugl-field>
+
+    <ugl-field [label]="question.label" *ngSwitchCase="'autocomplete'"
+        [name]="question.label"
+        [required]="question.required"
+        [value]="question.value"
+        [type]="question.controlType"
+        [message]="'Type an ' + question.label"
+        [messageRequired]="'Required'"
+        [autoCompleteOptions]="question.options"
+        >
+    </ugl-field>
+
+  </div>
+
+  <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+</div>
